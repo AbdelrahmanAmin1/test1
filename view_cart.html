@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* Adjust the margin-top as needed */
+}
+
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+    background-color: #F5E4D7;
+      }
+
+      h1 {
+        display: flex;
+        font-size: 50px;
+        justify-content: center;
+      }
+      th {
+        font-size: 30px;
+      }
+
+      button {
+      display: flex;
+      justify-content: center;
+
+      padding: .9rem 1.5rem;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      color: var(--main-color);
+      background: none;
+      cursor: pointer;
+      margin-top:4rem;
+      font-size: 2rem;
+            }
+
+#cart-items td:last-child,
+#cart-total {
+    text-align: right;
+}
+#cart-total {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.btn:hover {
+
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+    color: #f2e9e9; /* Add this line to change the text color on hover */
+    background-color: var(--main-color); /* Add this line to change the background color on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 3px solid black;
+}
+
+th {
+    height: 70px;
+}
+tfoot tr td {
+  background-color: aliceblue;
+  height: 70px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+  </style>
+</head>
+<body>
+  <h1>View Cart</h1>
+  <table id="cart-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Total:</td>
+        <td id="cart-total">$0.00</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+  <div class="btn-container">
+  <button id="checkout-btn" class="btn">Checkout</button></div>
+  <script src="script.js"></script>
+
+</body>
+</html>

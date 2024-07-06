@@ -1,0 +1,34 @@
+/* view_cart.html 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Cart</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="lolstyle.css">
+</head>
+<body>
+    <header>
+        <h1>View Cart</h1>
+    </header>
+    <main>
+        <section class="menu-items">
+            <h2>Selected Menu Items</h2>
+            <!-- Display selected menu items here -->
+        </section>
+        <section class="pastry-items">
+            <h2>Selected Pastries</h2>
+            <!-- Display selected pastries here -->
+        </section>
+        <section class="total">
+            <h2>Total</h2>
+            <p id="total-amount">$0.00</p>
+        </section>
+    </main>
+    <!-- Link to your JavaScript file -->
+    <script src="calscript.js"></script>
+</body>
+</html>
+*/
